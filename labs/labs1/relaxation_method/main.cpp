@@ -17,19 +17,15 @@ int main() {
     long double epsilon;
     int iterations = 31;
     long double f_x;
-
-    cout << "Enter epsilon: ";
-    cin >> epsilon;
-
     long double m1 = 0.25;
     long double M1 = 2.333;
-
     long double q = (M1 - m1) / (M1 + m1);
     long double z0 = 0.75;
+     cout << "Enter epsilon: ";
+    cin >> epsilon;
 
     int calculatedIterations = ceil(log(z0 / epsilon) / log(1.0 / q)) + 1;
     cout << "Number of iterations: " << calculatedIterations << endl;
-
     cout << setw(8) << "i" << setw(30) << "x" << setw(30) << "f(x)" << endl;
     cout << setprecision(15);
 
